@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4e71518e8d1dfeb419a3569ffe904250
+timeCreated: 1490165324
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 86222
+  packageName: The Barn
+  packageVersion: 1.1
+  assetPath: Assets/the_barn/scenes/EmptyBarn.unity
+  uploadId: 184849

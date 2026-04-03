@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 942a0f4cdcb6da54a997c294210e79d2
+timeCreated: 1493020172
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 86222
+  packageName: The Barn
+  packageVersion: 1.1
+  assetPath: Assets/the_barn/Materials/black_01.mat
+  uploadId: 184849

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6b2bcd7f6fe332c448acf80150c5dd63
+timeCreated: 1488473760
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 86222
+  packageName: The Barn
+  packageVersion: 1.1
+  assetPath: Assets/the_barn/scenes/DemoScene.unity
+  uploadId: 184849

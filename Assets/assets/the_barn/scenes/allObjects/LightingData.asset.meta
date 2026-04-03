@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 77ea89afaba980d4cb24c84ad459b1a9
+timeCreated: 1497341408
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 86222
+  packageName: The Barn
+  packageVersion: 1.1
+  assetPath: Assets/the_barn/scenes/allObjects/LightingData.asset
+  uploadId: 184849

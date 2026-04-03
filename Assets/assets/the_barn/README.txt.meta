@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ddffba787f25dd544b2cb2129db62cbb
+timeCreated: 1492018882
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 86222
+  packageName: The Barn
+  packageVersion: 1.1
+  assetPath: Assets/the_barn/README.txt
+  uploadId: 184849

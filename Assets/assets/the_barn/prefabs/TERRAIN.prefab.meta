@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3c517e55c68875947a8c3be35168af3c
+timeCreated: 1488472636
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 86222
+  packageName: The Barn
+  packageVersion: 1.1
+  assetPath: Assets/the_barn/prefabs/TERRAIN.prefab
+  uploadId: 184849

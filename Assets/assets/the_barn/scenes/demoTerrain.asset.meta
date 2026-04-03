@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b5f2f85c64c6ab148a61e69afaa49957
+timeCreated: 1487338799
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 86222
+  packageName: The Barn
+  packageVersion: 1.1
+  assetPath: Assets/the_barn/scenes/demoTerrain.asset
+  uploadId: 184849

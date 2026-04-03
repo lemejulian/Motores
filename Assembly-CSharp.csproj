@@ -55,6 +55,7 @@
     <Compile Include="Assets\Scripts\PlayerInputAction.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\assets\Cartoon_Farm_Crops\README.txt" />
     <None Include="Assets\assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Plants_Shader.shader" />
     <None Include="Assets\assets\Polytope Studio\Lowpoly_Village\Sources\Shaders\PT_Buildings_Shader_PBR.shader" />
     <None Include="Assets\assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Opaque_Shader.shader" />
@@ -62,6 +63,7 @@
     <None Include="Assets\assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Water_Shader.shader" />
     <None Include="Assets\assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Flowers_Shader.shader" />
     <None Include="Assets\assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Rock_Shader.shader" />
+    <None Include="Assets\assets\the_barn\README.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

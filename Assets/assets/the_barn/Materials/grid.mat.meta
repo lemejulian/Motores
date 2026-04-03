@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9a83dedb56656e5429726e3e3dee5444
+timeCreated: 1493020644
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 86222
+  packageName: The Barn
+  packageVersion: 1.1
+  assetPath: Assets/the_barn/Materials/grid.mat
+  uploadId: 184849
