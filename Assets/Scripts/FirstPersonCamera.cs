@@ -1,11 +1,21 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PrimeraPersona : MonoBehaviour
 {
     [Header("Movimiento")]
     public float movementSpeed = 2f;
+    public float sprintSpeed = 8f;
+    public float crouchSpeed = 1f;
     public float gravity = -9.8f;
+
+    [Header("Sprint")]
+    public float sprintDuration = 3f;
+    public float sprintCooldown = 10f;
+
+    [Header("Crouch Altura")]
+    public float crouchHeight = 1f;
 
     [Header("Cámara")]
     public Transform cameraTransform;
@@ -17,17 +27,26 @@ public class PrimeraPersona : MonoBehaviour
     private CharacterController _characterController;
 
     private Vector2 _movement;
-    private Vector3 _velocity;
     private Vector2 _look;
+    private Vector3 _velocity;
+
 
     private float _currentRotationY;
+
+    private bool isSprinting;
+    private bool canSprint = true;
+    private bool isCrouching;
+
+    // Valores originales del CharacterController
+    private float originalHeight;
+    private Vector3 originalCenter;
 
     private void Awake()
     {
         _inputAction = new PlayerInputAction();
         _characterController = GetComponent<CharacterController>();
 
-        // 🔹 Si no asignaste la cámara en el Inspector, usa la principal automáticamente
+        // Si no asignaste la cámara en el Inspector, usa la principal automáticamente
         if (cameraTransform == null && Camera.main != null)
         {
             cameraTransform = Camera.main.transform;
@@ -41,23 +60,24 @@ public class PrimeraPersona : MonoBehaviour
 
         _inputAction.Player.Enable();
 
+        // Guardar valores originales
+        originalHeight = _characterController.height;
+        originalCenter = _characterController.center;
+
         // Movimiento
-        _inputAction.Player.Move.performed += SetMovement;
-        _inputAction.Player.Move.canceled += SetMovement;
+        _inputAction.Player.Move.performed += ctx => _movement = ctx.ReadValue<Vector2>();
+        _inputAction.Player.Move.canceled += ctx => _movement = Vector2.zero;
 
-        // Mirar
-        _inputAction.Player.Look.performed += SetLook;
-        _inputAction.Player.Look.canceled += SetLook;
-    }
+        // Cámara
+        _inputAction.Player.Look.performed += ctx => _look = ctx.ReadValue<Vector2>();
+        _inputAction.Player.Look.canceled += ctx => _look = Vector2.zero;
 
-    private void SetMovement(InputAction.CallbackContext context)
-    {
-        _movement = context.ReadValue<Vector2>();
-    }
+        // Sprint
+        _inputAction.Player.Sprint.started += OnSprint;
 
-    private void SetLook(InputAction.CallbackContext context)
-    {
-        _look = context.ReadValue<Vector2>();
+        // Crouch
+        _inputAction.Player.Crouch.started += OnCrouch;
+        _inputAction.Player.Crouch.canceled += OnCrouch;
     }
 
     private void Update()
@@ -70,7 +90,15 @@ public class PrimeraPersona : MonoBehaviour
     {
         // Movimiento horizontal
         Vector3 move = transform.right * _movement.x + transform.forward * _movement.y;
-        _characterController.Move(move * movementSpeed * Time.deltaTime);
+
+        float speed = movementSpeed;
+
+        if (isCrouching)
+            speed = crouchSpeed;
+        else if (isSprinting)
+            speed = sprintSpeed;
+
+        _characterController.Move(move * speed * Time.deltaTime);
 
         // Gravedad
         if (_characterController.isGrounded && _velocity.y < 0)
@@ -84,14 +112,63 @@ public class PrimeraPersona : MonoBehaviour
 
     private void Look()
     {
-        // Normalizar movimiento del mouse
-        Vector2 mouseNormalized = _look * sensitivity;
+        Vector2 mouse = _look * sensitivity;
 
-        // Rotación vertical (clamp para no girar demasiado)
-        _currentRotationY = Mathf.Clamp(_currentRotationY - mouseNormalized.y, minLimit, maxLimit);
+        _currentRotationY = Mathf.Clamp(_currentRotationY - mouse.y, minLimit, maxLimit);
         cameraTransform.localRotation = Quaternion.Euler(_currentRotationY, 0, 0);
 
-        // Rotación horizontal
-        transform.Rotate(Vector3.up * mouseNormalized.x);
+        transform.Rotate(Vector3.up * mouse.x);
+    }
+
+    private void OnSprint(InputAction.CallbackContext context)
+    {
+        if (canSprint && !isCrouching)
+        {
+            StartCoroutine(SprintRoutine());
+        }
+    }
+
+    private void OnCrouch(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            isCrouching = true;
+
+            _characterController.height = crouchHeight;
+            _characterController.center = new Vector3(
+                originalCenter.x,
+                crouchHeight / 2f,
+                originalCenter.z
+            );
+
+            Debug.Log("Agachado");
+        }
+        else if (context.canceled)
+        {
+            isCrouching = false;
+
+            _characterController.height = originalHeight;
+            _characterController.center = originalCenter;
+
+            Debug.Log("De pie");
+        }
+    }
+
+    private IEnumerator SprintRoutine()
+    {
+        canSprint = false;
+        isSprinting = true;
+
+        Debug.Log("Sprint activado");
+
+        yield return new WaitForSeconds(sprintDuration);
+
+        isSprinting = false;
+        Debug.Log("Sprint terminado");
+
+        yield return new WaitForSeconds(sprintCooldown);
+
+        canSprint = true;
+        Debug.Log("Sprint disponible otra vez");
     }
 }

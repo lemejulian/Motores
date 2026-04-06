@@ -75860,8 +75860,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea229bc18b222a9408ba2a2a709022f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PrimeraPersona
-  movementSpeed: 8
+  movementSpeed: 5
+  sprintSpeed: 8
+  crouchSpeed: 1
   gravity: -9.8
+  sprintDuration: 3
+  sprintCooldown: 10
+  crouchHeight: 1
   cameraTransform: {fileID: 131950937}
   sensitivity: 0.3
   minLimit: -80
