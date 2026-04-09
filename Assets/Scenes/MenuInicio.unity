@@ -2008,10 +2008,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "      Controles                           Camara\n  W   A    S    D                          
-    Mouse\n\n                              Correr\n                              
-    Shift\n\n      Disparar                             Recarga\nClick Izquierdo                             
-    R"
+  m_text: "      Controles                            Camara\n  W   A    S    D                           
+    Mouse\n\n\n                 Correr                Linterna\n                 
+    Shift                       T\n\n\n      Disparar                             
+    Recarga\nClick Izquierdo                               R"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

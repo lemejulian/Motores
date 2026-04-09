@@ -22,6 +22,10 @@ public class PrimeraPersona : MonoBehaviour
     public float sensitivity = 0.5f;
     public float minLimit = -80f;
     public float maxLimit = 80f;
+    
+    [Header("Linterna")]
+    public Light flashlight;
+    private bool flashlightOn = false;
 
     private PlayerInputAction _inputAction;
     private CharacterController _characterController;
@@ -46,7 +50,7 @@ public class PrimeraPersona : MonoBehaviour
         _inputAction = new PlayerInputAction();
         _characterController = GetComponent<CharacterController>();
 
-        // Si no asignaste la cámara en el Inspector, usa la principal automáticamente
+       
         if (cameraTransform == null && Camera.main != null)
         {
             cameraTransform = Camera.main.transform;
@@ -60,7 +64,6 @@ public class PrimeraPersona : MonoBehaviour
 
         _inputAction.Player.Enable();
 
-        // Guardar valores originales
         originalHeight = _characterController.height;
         originalCenter = _characterController.center;
 
@@ -78,6 +81,8 @@ public class PrimeraPersona : MonoBehaviour
         // Crouch
         _inputAction.Player.Crouch.started += OnCrouch;
         _inputAction.Player.Crouch.canceled += OnCrouch;
+
+        _inputAction.Player.Flashlight.started += OnFlashlight;
     }
 
     private void Update()
@@ -171,4 +176,17 @@ public class PrimeraPersona : MonoBehaviour
         canSprint = true;
         Debug.Log("Sprint disponible otra vez");
     }
+
+    private void OnFlashlight(InputAction.CallbackContext context)
+{
+    flashlightOn = !flashlightOn; 
+
+    if (flashlight != null)
+    {
+        flashlight.enabled = flashlightOn;
+    }
+
+    Debug.Log("Linterna: " + (flashlightOn ? "Encendida" : "Apagada"));
+}
+
 }
