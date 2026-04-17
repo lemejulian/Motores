@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MOTORES VIDEOJUEGO UTN\\Motores\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2652F375-FE69-5EBD-71BA-13708E8D736E}|Assembly-CSharp.csproj|d:\\motores videojuego utn\\motores\\assets\\scripts\\firstpersoncamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2652F375-FE69-5EBD-71BA-13708E8D736E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\firstpersoncamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FirstPersonCamera.cs",
+              "DocumentMoniker": "D:\\MOTORES VIDEOJUEGO UTN\\Motores\\Assets\\Scripts\\FirstPersonCamera.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FirstPersonCamera.cs",
+              "ToolTip": "D:\\MOTORES VIDEOJUEGO UTN\\Motores\\Assets\\Scripts\\FirstPersonCamera.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FirstPersonCamera.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-07T22:43:50.051Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
