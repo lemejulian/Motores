@@ -81,6 +81,7 @@ public class VisionEnemigo : MonoBehaviour
                 isChasing = false;
                 animator.SetBool("isChasing", false);
                 animator.SetBool("isWalking", false);
+                animator.SetBool("isAttacking", false);
                 sonidoReproducido = false; 
             }
         }
@@ -93,8 +94,93 @@ public class VisionEnemigo : MonoBehaviour
             Debug.Log("¡Ataque!");
 
             animator.SetBool("isAttacking", true);
+            animator.SetBool("isChasing", false);
 
             lastAttackTime = Time.time;
         }
     }
 }
+
+/*using UnityEngine;
+
+public class VisionEnemigo : MonoBehaviour
+{
+    // ... (variables públicas iguales)
+
+    private bool isChasing = false;
+    private bool isAttacking = false; // Nueva variable de control
+    private Rigidbody rb;
+    private Animator animator;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+    }
+
+    void Update()
+    {
+        Vector3 direction = player.position - transform.position;
+        float distance = direction.magnitude;
+
+        // 1. Lógica de Detección (Sensor)
+        if (!isChasing && distance < visionRange)
+        {
+            Vector3 direccionPlana = new Vector3(direction.x, 0, direction.z);
+            if (Vector3.Angle(transform.forward, direccionPlana) < visionAngle / 2f)
+            {
+                isChasing = true;
+                animator.SetBool("isChasing", true);
+            }
+        }
+
+        // 2. Lógica de Pérdida de interés
+        if (isChasing && distance > visionRange * 1.5f)
+        {
+            isChasing = false;
+            isAttacking = false;
+            animator.SetBool("isChasing", false);
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isAttacking", false);
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (!isChasing) return;
+
+        float distance = Vector3.Distance(player.position, transform.position);
+        Vector3 direccion = (player.position - transform.position);
+        direccion.y = 0;
+
+        // 3. Control de Estados (Motor)
+        if (distance > attackRange)
+        {
+            // Persecución
+            isAttacking = false;
+            rb.MoveRotation(Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direccion), 5f * Time.fixedDeltaTime));
+            rb.MovePosition(transform.position + direccion.normalized * speed * Time.fixedDeltaTime);
+            
+            animator.SetBool("isWalking", true);
+            animator.SetBool("isAttacking", false);
+        }
+        else
+        {
+            // Ataque
+            isAttacking = true;
+            rb.velocity = Vector3.zero; // Frenamos la física
+            animator.SetBool("isWalking", false);
+            Attack();
+        }
+    }
+
+    void Attack()
+    {
+        if (Time.time > lastAttackTime + attackCooldown)
+        {
+            animator.SetBool("isAttacking", true);
+            lastAttackTime = Time.time;
+        }
+    }
+}*/
