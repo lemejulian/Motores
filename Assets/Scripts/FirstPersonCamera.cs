@@ -185,6 +185,6 @@ public class PrimeraPersona : MonoBehaviour
     {
         PlayerAnim.SetFloat("X", newDirection.x);
         PlayerAnim.SetFloat("Y", newDirection.y);
-        // PlayerAnim.SetBool("isCrouching", isCrouching);//
+        //PlayerAnim.SetBool("isCrouching", isCrouching);//
     }
 }

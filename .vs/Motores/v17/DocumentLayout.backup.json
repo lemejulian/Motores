@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{2652F375-FE69-5EBD-71BA-13708E8D736E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\firstpersoncamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2652F375-FE69-5EBD-71BA-13708E8D736E}|Assembly-CSharp.csproj|d:\\motores videojuego utn\\motores\\assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2652F375-FE69-5EBD-71BA-13708E8D736E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\MOTORES VIDEOJUEGO UTN\\Motores\\Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
@@ -22,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerInteraction.cs",
+              "DocumentMoniker": "D:\\MOTORES VIDEOJUEGO UTN\\Motores\\Assets\\Scripts\\PlayerInteraction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerInteraction.cs",
+              "ToolTip": "D:\\MOTORES VIDEOJUEGO UTN\\Motores\\Assets\\Scripts\\PlayerInteraction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerInteraction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T22:15:54.109Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,14 +49,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\VisionEnemigo.cs",
               "ToolTip": "D:\\MOTORES VIDEOJUEGO UTN\\Motores\\Assets\\Scripts\\VisionEnemigo.cs",
               "RelativeToolTip": "Assets\\Scripts\\VisionEnemigo.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAwwLkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowHkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T22:46:26.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Lit.shader",
               "DocumentMoniker": "D:\\MOTORES VIDEOJUEGO UTN\\Motores\\Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Shaders\\Lit.shader",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@1e87cf1dccb8\\Shaders\\Lit.shader",
@@ -58,7 +75,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\FirstPersonCamera.cs",
               "ToolTip": "D:\\MOTORES VIDEOJUEGO UTN\\Motores\\Assets\\Scripts\\FirstPersonCamera.cs",
               "RelativeToolTip": "Assets\\Scripts\\FirstPersonCamera.cs",
-              "ViewState": "AgIAALMAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAswIcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-07T22:43:50.051Z",
               "EditorCaption": ""
