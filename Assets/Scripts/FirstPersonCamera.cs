@@ -34,23 +34,24 @@ public class PrimeraPersona : MonoBehaviour
     private Vector2 _look;
     private Vector3 _velocity;
 
-
     private float _currentRotationY;
 
     private bool isSprinting;
     private bool canSprint = true;
     private bool isCrouching;
 
-    // Valores originales del CharacterController
     private float originalHeight;
     private Vector3 originalCenter;
+
+    private Animator PlayerAnim;
+
+    private Vector2 newDirection;
 
     private void Awake()
     {
         _inputAction = new PlayerInputAction();
         _characterController = GetComponent<CharacterController>();
 
-       
         if (cameraTransform == null && Camera.main != null)
         {
             cameraTransform = Camera.main.transform;
@@ -82,13 +83,18 @@ public class PrimeraPersona : MonoBehaviour
         _inputAction.Player.Crouch.started += OnCrouch;
         _inputAction.Player.Crouch.canceled += OnCrouch;
 
+        // Linterna
         _inputAction.Player.Flashlight.started += OnFlashlight;
+
+        // CORREGIDO: Animator con mayúscula
+        PlayerAnim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
     {
         Movement();
         Look();
+        AnimLogic();
     }
 
     private void Movement()
@@ -97,22 +103,20 @@ public class PrimeraPersona : MonoBehaviour
         Vector3 move = transform.right * _movement.x + transform.forward * _movement.y;
 
         float speed = movementSpeed;
-
-        if (isCrouching)
-            speed = crouchSpeed;
-        else if (isSprinting)
-            speed = sprintSpeed;
+        if (isCrouching) speed = crouchSpeed;
+        else if (isSprinting) speed = sprintSpeed;
 
         _characterController.Move(move * speed * Time.deltaTime);
 
         // Gravedad
         if (_characterController.isGrounded && _velocity.y < 0)
-        {
             _velocity.y = -2f;
-        }
 
         _velocity.y += gravity * Time.deltaTime;
         _characterController.Move(_velocity * Time.deltaTime);
+
+        // CORREGIDO: usar _movement en lugar de variables inexistentes
+        newDirection = new Vector2(_movement.x, _movement.y);
     }
 
     private void Look()
@@ -138,23 +142,15 @@ public class PrimeraPersona : MonoBehaviour
         if (context.started)
         {
             isCrouching = true;
-
             _characterController.height = crouchHeight;
-            _characterController.center = new Vector3(
-                originalCenter.x,
-                crouchHeight / 2f,
-                originalCenter.z
-            );
-
+            _characterController.center = new Vector3(originalCenter.x, crouchHeight / 2f, originalCenter.z);
             Debug.Log("Agachado");
         }
         else if (context.canceled)
         {
             isCrouching = false;
-
             _characterController.height = originalHeight;
             _characterController.center = originalCenter;
-
             Debug.Log("De pie");
         }
     }
@@ -163,7 +159,6 @@ public class PrimeraPersona : MonoBehaviour
     {
         canSprint = false;
         isSprinting = true;
-
         Debug.Log("Sprint activado");
 
         yield return new WaitForSeconds(sprintDuration);
@@ -178,15 +173,18 @@ public class PrimeraPersona : MonoBehaviour
     }
 
     private void OnFlashlight(InputAction.CallbackContext context)
-{
-    flashlightOn = !flashlightOn; 
-
-    if (flashlight != null)
     {
-        flashlight.enabled = flashlightOn;
+        flashlightOn = !flashlightOn; 
+        if (flashlight != null)
+            flashlight.enabled = flashlightOn;
+
+        Debug.Log("Linterna: " + (flashlightOn ? "Encendida" : "Apagada"));
     }
 
-    Debug.Log("Linterna: " + (flashlightOn ? "Encendida" : "Apagada"));
-}
-
+    public void AnimLogic()
+    {
+        PlayerAnim.SetFloat("X", newDirection.x);
+        PlayerAnim.SetFloat("Y", newDirection.y);
+        // PlayerAnim.SetBool("isCrouching", isCrouching);//
+    }
 }
