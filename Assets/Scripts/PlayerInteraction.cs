@@ -59,5 +59,10 @@ public class PlayerInteraction : MonoBehaviour
         heldObject.transform.SetParent(null);
         heldObject = null;
     }
+<<<<<<< Updated upstream
 
 }
+=======
+    
+}
+>>>>>>> Stashed changes
