@@ -51,18 +51,14 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    void DropObject()
-    {
-        Rigidbody rb = heldObject.GetComponent<Rigidbody>();
-        if (rb != null) rb.isKinematic = false;
+   void DropObject()
+{
+    Rigidbody rb = heldObject.GetComponent<Rigidbody>();
+    if (rb != null) rb.isKinematic = false;
 
-        heldObject.transform.SetParent(null);
-        heldObject = null;
-    }
-<<<<<<< Updated upstream
+    heldObject.transform.SetParent(null);
+    heldObject = null;
+}
+}
 
-}
-=======
-    
-}
->>>>>>> Stashed changes
+
