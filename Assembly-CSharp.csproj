@@ -53,6 +53,7 @@
     <Compile Include="Assets\Scripts\Aparicion.cs" />
     <Compile Include="Assets\assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\PT_PlayerMovement.cs" />
     <Compile Include="Assets\assets\Low Poly Guns\Scripts\GunView.cs" />
+    <Compile Include="Assets\Scripts\WeaponController.cs" />
     <Compile Include="Assets\assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\PT_MouseLook.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\VisionEnemigo.cs" />

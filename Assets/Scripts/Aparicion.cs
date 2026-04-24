@@ -4,7 +4,7 @@ using UnityEngine;
 public class AparicionNina : MonoBehaviour
 {
     public GameObject nina;
-    public AudioSource audioJugador; // 🔊 voz "te estoy viendo"
+    public AudioSource audioAtras; // 🔊 sonido detrás
 
     private bool activado = false;
 
@@ -14,8 +14,8 @@ public class AparicionNina : MonoBehaviour
         {
             activado = true;
 
-            // 🔊 Reproducir la voz
-            audioJugador.Play();
+            // 🔊 reproducir sonido atrás
+            audioAtras.Play();
 
             StartCoroutine(MostrarNina());
 
