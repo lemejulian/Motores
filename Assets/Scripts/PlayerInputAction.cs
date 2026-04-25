@@ -72,7 +72,7 @@ using UnityEngine.InputSystem.Utilities;
 /// }
 /// </code>
 /// </example>
-public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
+public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
 {
     /// <summary>
     /// Provides access to the underlying asset instance.
@@ -140,11 +140,7 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Interactions"",
                     ""type"": ""Button"",
-<<<<<<< Updated upstream
                     ""id"": ""ecce43ee-1d53-4cca-85fc-e813e75233a9"",
-=======
-                    ""id"": ""8bc01460-6391-4fa9-ab92-ac2506523a10"",
->>>>>>> Stashed changes
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -253,11 +249,7 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-<<<<<<< Updated upstream
                     ""id"": ""e3a2b0c7-b711-4e0f-93ed-2cfbf8fe698a"",
-=======
-                    ""id"": ""ea015c6d-12ba-48f5-8d5d-4667db5b6bad"",
->>>>>>> Stashed changes
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
