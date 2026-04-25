@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.InputSystem; // Necesario para el New Input System
+using UnityEngine.InputSystem;
 
 public class Phone : MonoBehaviour
 {
@@ -9,9 +9,9 @@ public class Phone : MonoBehaviour
 
     private bool isRange = false;
 
-    // Actualizamos el estado de cercanía mediante triggers
     private void OnTriggerEnter(Collider other)
     {
+        // Asegúrate de que el jugador tenga el tag "Player"
         if (other.CompareTag("Player")) isRange = true;
     }
 
@@ -22,7 +22,7 @@ public class Phone : MonoBehaviour
 
     void Update()
     {
-        // Detectamos si el jugador presiona E estando en rango
+        // Validación de null para evitar errores si el script está activo sin panel
         if (isRange && Keyboard.current.eKey.wasPressedThisFrame)
         {
             AnswerCall();
@@ -33,12 +33,13 @@ public class Phone : MonoBehaviour
     {
         if (panelPhone != null)
         {
-            panelPhone.SetActive(false);
-            Debug.Log("Llamada atendida: Panel desactivado correctamente.");
+            // Usamos ! para invertir el estado, por si quieres que también se vuelva a activar
+            panelPhone.SetActive(!panelPhone.activeSelf);
+            Debug.Log("Interacción con el teléfono ejecutada.");
         }
         else
         {
-            Debug.LogWarning("El panelCartel no está asignado en el Inspector del objeto Phone.");
+            Debug.LogWarning("No asignaste el panel en el Inspector.");
         }
     }
 }
