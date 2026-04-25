@@ -118,7 +118,7 @@ public class EnemyController : MonoBehaviour
 
     private bool isChasing = false;
     private bool isAttacking = false;
-    private bool isWalking = false; // Estado para cuando sale del rango
+    //private bool isWalking = false; // Estado para cuando sale del rango
 
     void Update()
     {
@@ -191,6 +191,6 @@ public class EnemyController : MonoBehaviour
         // Solo enviamos cambios si el valor es distinto para optimizar
         if (animator.GetBool("isChasing") != chasing) animator.SetBool("isChasing", chasing);
         if (animator.GetBool("isAttacking") != attacking) animator.SetBool("isAttacking", attacking);
-        if (animator.GetBool("isWalking") != walking) animator.SetBool("isWalking", walking);
+        //if (animator.GetBool("isWalking") != walking) animator.SetBool("isWalking", walking);
     }
 }
