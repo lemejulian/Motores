@@ -1,7 +1,8 @@
+using System.Collections;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
-
+using Debug = UnityEngine.Debug;
 public class PrimeraPersona : MonoBehaviour
 {
     [Header("Movimiento")]
@@ -36,8 +37,16 @@ public class PrimeraPersona : MonoBehaviour
 
     private float _currentRotationY;
 
+    private Coroutine sprintRoutine;
+    private Coroutine cooldownRoutine;
+    private float sprintRemaining;
+    private bool isExhausted;
+    private bool isRunningRoutine;
+    private bool sprintExhausted;
     private bool isSprinting;
     private bool canSprint = true;
+    private bool sprintHeld;
+    
     private bool isCrouching;
 
     private float originalHeight;
@@ -77,7 +86,8 @@ public class PrimeraPersona : MonoBehaviour
         _inputAction.Player.Look.canceled += ctx => _look = Vector2.zero;
 
         // Sprint
-        _inputAction.Player.Sprint.started += OnSprint;
+        _inputAction.Player.Sprint.started += OnSprintStarted;
+        _inputAction.Player.Sprint.canceled += OnSprintCanceled;
 
         // Crouch
         _inputAction.Player.Crouch.started += OnCrouch;
@@ -129,12 +139,84 @@ public class PrimeraPersona : MonoBehaviour
         transform.Rotate(Vector3.up * mouse.x);
     }
 
-    private void OnSprint(InputAction.CallbackContext context)
+    private void OnSprintStarted(InputAction.CallbackContext context)
     {
-        if (canSprint && !isCrouching)
+        sprintHeld = true;
+
+        if (isExhausted || isCrouching) return;
+
+        StartSprint();
+        Debug.Log("Sprint input ON");
+    }
+
+    private void OnSprintCanceled(InputAction.CallbackContext context)
+    {
+        sprintHeld = false;
+        Debug.Log("Sprint input OFF");
+    }
+
+    private void StartSprint()
+    {
+        if (isRunningRoutine || isExhausted || isCrouching) return;
+
+        isSprinting = true;
+        isRunningRoutine = true;
+
+        if (sprintRemaining <= 0f)
+            sprintRemaining = sprintDuration;
+
+        sprintRoutine = StartCoroutine(SprintLoop());
+    }
+
+    private IEnumerator SprintLoop()
+    {
+        Debug.Log("Sprint activo");
+
+        while (true)
         {
-            StartCoroutine(SprintRoutine());
+            // si suelta tecla → pausa sprint
+            if (!sprintHeld)
+            {
+                isSprinting = false;
+                isRunningRoutine = false;
+                yield break;
+            }
+
+            sprintRemaining -= Time.deltaTime;
+
+            // si se acaba stamina
+            if (sprintRemaining <= 0f)
+            {
+                sprintRemaining = 0f;
+                isExhausted = true;
+
+                StopSprint();
+
+                cooldownRoutine = StartCoroutine(CooldownRoutine());
+                yield break;
+            }
+
+            yield return null;
         }
+    }
+
+    private void StopSprint()
+    {
+        isSprinting = false;
+        isRunningRoutine = false;
+        Debug.Log("Sprint detenido");
+    }
+
+    private IEnumerator CooldownRoutine()
+    {
+        Debug.Log("Cooldown iniciado");
+
+        yield return new WaitForSeconds(sprintCooldown);
+
+        isExhausted = false;
+        sprintRemaining = sprintDuration;
+
+        Debug.Log("Sprint listo otra vez");
     }
 
     private void OnCrouch(InputAction.CallbackContext context)
@@ -155,7 +237,7 @@ public class PrimeraPersona : MonoBehaviour
         }
     }
 
-    private IEnumerator SprintRoutine()
+    /*private IEnumerator SprintRoutine()
     {
         canSprint = false;
         isSprinting = true;
@@ -170,7 +252,7 @@ public class PrimeraPersona : MonoBehaviour
 
         canSprint = true;
         Debug.Log("Sprint disponible otra vez");
-    }
+    }*/
 
     private void OnFlashlight(InputAction.CallbackContext context)
     {
