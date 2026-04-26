@@ -3786,12 +3786,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3988166acdcdc5a42935037945f3bc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHouseTrigger
-<<<<<<< Updated upstream
   dialogueText: {fileID: 1609022266}
   message: A donde estoy yendo es por el otro camino.
-=======
-  stop: {fileID: 794245020}
->>>>>>> Stashed changes
+
 --- !u!65 &107048478
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4003,23 +4000,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_LocalPosition.x
-<<<<<<< Updated upstream
-      value: 361.545
-=======
-      value: 361.407
->>>>>>> Stashed changes
-      objectReference: {fileID: 0}
-    - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.392
-      objectReference: {fileID: 0}
-    - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
-      propertyPath: m_LocalPosition.z
-<<<<<<< Updated upstream
-      value: 52
-=======
-      value: 53.25
->>>>>>> Stashed changes
+- target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
+  propertyPath: m_LocalRotation.x
+  value: 361.545
+  objectReference: {fileID: 0}
+- target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
+  propertyPath: m_LocalPosition.y
+  value: 0.392
+  objectReference: {fileID: 0}
+- target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
+  propertyPath: m_LocalPosition.z
+  value: 52
+  objectReference: {fileID: 0}
+
       objectReference: {fileID: 0}
     - target: {fileID: 578376449398627443, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}
       propertyPath: m_LocalRotation.w
@@ -48119,12 +48112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3988166acdcdc5a42935037945f3bc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHouseTrigger
-<<<<<<< Updated upstream
   dialogueText: {fileID: 1609022266}
   message: Que carajos de donde viene ese canto
-=======
-  stop: {fileID: 0}
->>>>>>> Stashed changes
+
 --- !u!1001 &1079744056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59123,12 +59113,7 @@ RectTransform:
   - {fileID: 1278799244}
   - {fileID: 446418532}
   - {fileID: 817354423}
-<<<<<<< Updated upstream
   - {fileID: 1609022265}
-=======
-  - {fileID: 2008436104}
-  - {fileID: 794245021}
->>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -59136,6 +59121,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+
 --- !u!1001 &1336357260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72557,12 +72543,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3988166acdcdc5a42935037945f3bc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossHouseTrigger
-<<<<<<< Updated upstream
   dialogueText: {fileID: 1609022266}
-  message: "Okey \xBFD\xF3nde est\xE1 este boludo?"
-=======
-  stop: {fileID: 0}
->>>>>>> Stashed changes
+  message: "Okey ¿Dónde está este boludo?"
+
 --- !u!65 &1642049747
 BoxCollider:
   m_ObjectHideFlags: 0
