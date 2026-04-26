@@ -54,6 +54,7 @@
     <Compile Include="Assets\Scripts\Aparicion.cs" />
     <Compile Include="Assets\assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\PT_PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Shot.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\assets\Low Poly Guns\Scripts\GunView.cs" />
     <Compile Include="Assets\Scripts\BossHouse.cs" />
     <Compile Include="Assets\Nokobot\Modern Guns - Handgun\_Demo Assets\SimpleShoot.cs" />

@@ -1,20 +1,19 @@
 using UnityEngine;
-/*
+
 public class Bullet : MonoBehaviour
 {
-    public int damage = 1; // daño que hace el revólver
+    public int damage = 1;
 
     private void OnCollisionEnter(Collision collision)
     {
-        // buscar si el objeto impactado tiene un "Health"
-        Health target = collision.gameObject.GetComponent<Health>();
+        Debug.Log("💥 Bala impactó contra: " + collision.gameObject.name);
+
+        Enemy target = collision.gameObject.GetComponent<Enemy>();
         if (target != null)
         {
             target.TakeDamage(damage);
         }
 
-        // destruir la bala al impactar
         Destroy(gameObject);
     }
 }
-*/
