@@ -57,50 +57,87 @@
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\assets\Low Poly Guns\Scripts\GunView.cs" />
     <Compile Include="Assets\Scripts\BossHouse.cs" />
+    <Compile Include="Assets\Scripts\PlayerFootsteps.cs" />
     <Compile Include="Assets\Nokobot\Modern Guns - Handgun\_Demo Assets\SimpleShoot.cs" />
     <Compile Include="Assets\assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\PT_MouseLook.cs" />
     <Compile Include="Assets\Scripts\EventPhone.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\MenuVictoria.cs" />
     <Compile Include="Assets\Scripts\VisionEnemigo.cs" />
     <Compile Include="Assets\Scripts\PlayerInputAction.cs" />
     <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
     <Compile Include="Assets\Scripts\Balla.cs" />
     <Compile Include="Assets\assets\Low Poly Guns\Scripts\GunsMenu.cs" />
+    <Compile Include="Assets\Scripts\MenuDerrota.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\FMOD\Metadata\SnapshotGroup\{4e59d21c-829b-4af0-a486-ba92edf00451}.xml" />
+    <None Include="Assets\FMOD\Metadata\Event\{bc42ca46-062e-4295-a18e-0b27050825e3}.xml" />
+    <None Include="Assets\FMOD\Metadata\ParameterPresetFolder\{42131e7e-5878-4cb1-b6ae-7b5f3afbea59}.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\FMOD\Metadata\ParameterPreset\{b9e49020-1319-4f37-9506-e29b3549714f}.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\FMOD\Metadata\Return\{f8e6e207-4049-4733-a59b-555a5edd01ea}.xml" />
+    <None Include="Assets\FMOD\Metadata\Mixer.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\FMOD\Metadata\Asset\{d84bd9b0-e600-4878-af16-ca6ffc238c4c}.xml" />
+    <None Include="Assets\FMOD\Metadata\Platform\{942cf0f7-041a-4aa0-bcf1-2b11436af445}.xml" />
+    <None Include="Assets\FMOD\Metadata\Tags.xml" />
+    <None Include="Assets\FMOD\Metadata\Bank\{9a3b5ec9-2d2c-4b38-bc99-a3c1b2d395cf}.xml" />
     <None Include="Assets\assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Plants_Shader.shader" />
+    <None Include="Assets\FMOD\Metadata\AudioFile\{51d2fb99-d1ef-464f-b298-aaba850c7fc5}.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\FMOD\Metadata\AudioFile\{41f3b7cb-8b9a-4b85-95a3-90b61f4cbe69}.xml" />
+    <None Include="Assets\FMOD\Metadata\Event\{22f367b2-c376-4396-9279-3875372acf21}.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\FMOD\Metadata\Bank\{ad937801-161b-427c-8511-eba62a383d98}.xml" />
     <None Include="Assets\assets\Polytope Studio\Lowpoly_Village\Sources\Shaders\PT_Buildings_Shader_PBR.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\FMOD\Metadata\Event\{2fadbb81-c397-466e-99c7-c775fcb17119}.xml" />
+    <None Include="Assets\FMOD\Metadata\AudioFile\{6db571e2-7344-4427-8a51-caddda4949e4}.xml" />
     <None Include="Assets\Nokobot\Modern Guns - Handgun\README.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\assets\DemonDoll\Standard_Two_Sided.shader" />
+    <None Include="Assets\FMOD\Metadata\Workspace.xml" />
     <None Include="Assets\assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Opaque_Shader.shader" />
     <None Include="Assets\assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Foliage_Shader.shader" />
+    <None Include="Assets\FMOD\Metadata\AudioFile\{f613c1da-6204-41c9-89eb-736d91e2b3b5}.xml" />
+    <None Include="Assets\FMOD\Metadata\SandboxFolder\{09ab44cc-7017-4e84-b5b1-aa2c82af7f91}.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\FMOD\Metadata\ProfilerFolder\{d76c4d11-2d3b-4eb8-9df8-dd38a8df7281}.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Water_Shader.shader" />
+    <None Include="Assets\FMOD\Metadata\AudioFile\{9b9543e6-5040-415b-bb8f-5adbb407b8af}.xml" />
     <None Include="Assets\assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Flowers_Shader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\assets\Survival Props\Disclaimer.txt" />
+    <None Include="Assets\FMOD\Metadata\AudioFile\{a68f7d8c-15ec-44df-94fd-0f4c5be3c66e}.xml" />
+    <None Include="Assets\FMOD\Metadata\Master.xml" />
+    <None Include="Assets\FMOD\Metadata\EffectPresetFolder\{0b4df519-853e-4ea8-a27e-d48e78327156}.xml" />
+    <None Include="Assets\FMOD\Metadata\AudioFile\{80a7c94e-7650-4290-af8f-b991b4aa2caf}.xml" />
+    <None Include="Assets\FMOD\Metadata\Event\{dcc8fb5a-40dd-4847-86b3-7d26efb520e0}.xml" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\FMOD\Metadata\BankFolder\{e12d552d-2ad0-4cbb-84ad-4990a4a0ea14}.xml" />
+    <None Include="Assets\FMOD\Metadata\Bank\{11822eb3-dab3-4caa-967d-4ac29ffec178}.xml" />
+    <None Include="Assets\FMOD\Metadata\AudioFile\{5ed8291d-63a1-404e-9caf-81aeb164edd3}.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\FMOD\Metadata\EventFolder\{d308d999-483e-418a-95ef-72b4f66076ae}.xml" />
+    <None Include="Assets\FMOD\Metadata\AudioFile\{8ae1e5d1-d50e-4e38-850f-4743c25b20fb}.xml" />
     <None Include="Assets\assets\Polytope Studio\Lowpoly_Environments\Sources\Shaders\PT_Rock_Shader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\FMOD\Metadata\Event\{91fc282c-be36-4588-a7bf-cc5d363a4a7d}.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\FMOD\Metadata\EncodingSetting\{3306ac59-74bf-409c-a7b4-ecf0b5c5cacd}.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\FMOD\Metadata\AudioFile\{2ab3f0c2-761e-409b-8dad-51521a540656}.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1361,6 +1398,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="FMODUnityEditor.csproj" />
+    <ProjectReference Include="FMODUnityHaptics.csproj" />
+    <ProjectReference Include="FMODUnityResonance.csproj" />
+    <ProjectReference Include="FMODUnity.csproj" />
+    <ProjectReference Include="FMODUnityResonanceEditor.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

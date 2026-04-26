@@ -1383,6 +1383,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj" />
+    <ProjectReference Include="FMODUnityEditor.csproj" />
+    <ProjectReference Include="FMODUnityHaptics.csproj" />
+    <ProjectReference Include="FMODUnityResonance.csproj" />
+    <ProjectReference Include="FMODUnity.csproj" />
+    <ProjectReference Include="FMODUnityResonanceEditor.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>
