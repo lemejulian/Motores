@@ -1,13 +1,18 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 public class Phone : MonoBehaviour
 {
     [Header("Configuración")]
     [Tooltip("Arrastra aquí el panel que quieres desactivar")]
     public GameObject panelPhone;
+    public GameObject houseCall;
 
     private bool isRange = false;
+
+    // Bandera para controlar que solo se muestre una vez
+    private bool alreadyShown = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -34,12 +39,19 @@ public class Phone : MonoBehaviour
         if (panelPhone != null)
         {
             // Usamos ! para invertir el estado, por si quieres que también se vuelva a activar
-            panelPhone.SetActive(!panelPhone.activeSelf);
+            panelPhone.SetActive(false);
+            houseCall.SetActive(true);
+            StartCoroutine(HideTextAfterSeconds(10f)); // mostrar por 3 segundos
             Debug.Log("Interacción con el teléfono ejecutada.");
         }
         else
         {
             Debug.LogWarning("No asignaste el panel en el Inspector.");
         }
+    }
+    private System.Collections.IEnumerator HideTextAfterSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        houseCall.gameObject.SetActive(false);
     }
 }
