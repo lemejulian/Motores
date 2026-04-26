@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI; 
 using TMPro;          
 using System.Collections;
+using FMODUnity;
 
 public class Shot : MonoBehaviour
 {
@@ -39,7 +40,8 @@ public class Shot : MonoBehaviour
         if (Time.time > shotRateTime)
         {
             GameObject newBullet = Instantiate(bulletPrefab, shootSpawn.position, shootSpawn.rotation);
-
+            GetComponent<StudioEventEmitter>().Play();
+            Debug.Log("Disparo");
             Rigidbody bulletRb = newBullet.GetComponent<Rigidbody>();
             if (bulletRb != null)
             {
