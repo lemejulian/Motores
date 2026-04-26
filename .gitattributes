@@ -1,0 +1,14 @@
+Assets/Plugins/FMOD/**/*.bundle text eol=lf
+Assets/Plugins/FMOD/**/Info.plist text eol=lf
+
+* text=auto
+
+*.cs text
+*.shader text
+*.cginc text
+
+*.png binary
+*.jpg binary
+*.fbx binary
+*.wav binary
+*.mp3 binary
