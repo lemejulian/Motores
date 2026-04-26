@@ -6,6 +6,7 @@ public class Phone : MonoBehaviour
     [Header("Configuración")]
     [Tooltip("Arrastra aquí el panel que quieres desactivar")]
     public GameObject panelPhone;
+    public GameObject bossCall;
 
     private bool isRange = false;
 
@@ -34,7 +35,8 @@ public class Phone : MonoBehaviour
         if (panelPhone != null)
         {
             // Usamos ! para invertir el estado, por si quieres que también se vuelva a activar
-            panelPhone.SetActive(!panelPhone.activeSelf);
+            panelPhone.SetActive(false);
+            bossCall.SetActive(true);
             Debug.Log("Interacción con el teléfono ejecutada.");
         }
         else
