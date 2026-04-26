@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{f613c1da-6204-41c9-89eb-736d91e2b3b5}">
+		<property name="assetPath">
+			<value>Chumbazo.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.76174603174603173</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d84bd9b0-e600-4878-af16-ca6ffc238c4c}</destination>
+		</relationship>
+	</object>
+</objects>
